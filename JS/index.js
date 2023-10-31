@@ -1,7 +1,7 @@
-import { url } from "./api.js";
+import { apiUrl } from "./api.js";
 import { gamesPage } from "../JS/products/games.js"
+import { getGames } from "../JS/products/games.js";
 import { gamePage } from "../JS/products/game.js"
-import { getGames } from "./api.js";
 
 getGames();
 
