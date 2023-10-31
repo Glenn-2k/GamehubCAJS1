@@ -38,11 +38,3 @@ export function displayGames(gamesList) {
         </div>`
     });
 } 
-
-// function displayJackets(jackets) {
-//     if (Array.isArray(jackets)) {
-//       jackets.forEach((jacket) => {
-//         console.log(jacket.title);
-//       });
-//     }
-//    }
