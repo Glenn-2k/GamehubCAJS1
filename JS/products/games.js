@@ -3,10 +3,15 @@ import { apiUrl } from "../api.js";
 const gameTitle = document.querySelector(".games-container");
 
 export async function getGames() {
-  const response = await fetch(apiUrl);
-  const results = await response.json();
-  // console.log(results);
-  return results;
+  try {
+    const response = await fetch(apiUrl);
+    const results = await response.json();
+    // console.log(results);
+    return results;
+  } catch (error) {
+    console.log("an error occured");
+    gameTitle.innerHTML = "An error occured";
+  }
 }
 
 const game = await getGames();

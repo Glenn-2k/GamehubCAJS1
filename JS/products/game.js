@@ -9,10 +9,14 @@ const id = params.get("id");
 const apiCall = url + id;
 
 async function getGame() {
-  const response = await fetch(apiCall);
-  const results = await response.json();
-  // console.log(results);
-  return results;
+  try {
+    const response = await fetch(apiCall);
+    const results = await response.json();
+    // console.log(results);
+    return results;
+  } catch (error) {
+    productSpecific.innerHTML = "An error occured";
+  }
 }
 
 export async function gamePage() {
