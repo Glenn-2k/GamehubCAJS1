@@ -21,6 +21,7 @@ export async function gamesPage() {
 }
 
 function displayGames(gamesList) {
+  gameTitle.innerHTML = "";
   gameArray.forEach((game) => {
     // console.log(game.title);
     // console.log(game.description);

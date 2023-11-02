@@ -24,7 +24,7 @@ export async function gamePage() {
 function displayGame(specificGame) {
   console.log(specificGame);
 
-  productSpecific.innerHTML += `
+  productSpecific.innerHTML = `
   <h1 class="specific-heading">${specificGame.title}</h1>
   <div class="grid-container-specific">
       <div class="specific-1">
