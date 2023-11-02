@@ -20,7 +20,7 @@ export async function gamesPage() {
   // console.log(games);
 }
 
-export function displayGames(gamesList) {
+function displayGames(gamesList) {
   gameArray.forEach((game) => {
     // console.log(game.title);
     // console.log(game.description);
@@ -29,7 +29,7 @@ export function displayGames(gamesList) {
         <a href="/product-specific.html?id=${game.id}"><img src="${game.image}"
                                     alt="image of ${game.title} cover" class="games-cover"></a>
         <h2 class="games-title">${game.title}</h2>
-        <p class="price">${game.price}</p>
+        <p class="price">$${game.price}</p>
         <a href="/cart-full.html" id="add-to-cart">Add to cart</a>
         </div>`;
   });
