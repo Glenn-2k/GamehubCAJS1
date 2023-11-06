@@ -15,7 +15,7 @@ export async function getGames() {
 }
 
 const game = await getGames();
-console.log(game);
+// console.log(game);
 
 const gameArray = Array.from(game);
 
