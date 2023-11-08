@@ -26,11 +26,12 @@ export async function gamesPage() {
 }
 
 function displayGames(gamesList) {
-  gameTitle.innerHTML = "";
-  gameArray.forEach((game) => {
-    // console.log(game.title);
-    // console.log(game.description);
-    gameTitle.innerHTML += `
+  try {
+    gameTitle.innerHTML = "";
+    gameArray.forEach((game) => {
+      // console.log(game.title);
+      // console.log(game.description);
+      gameTitle.innerHTML += `
         <div class="game">
         <a href="/product-specific.html?id=${game.id}"><img src="${game.image}"
                                     alt="image of ${game.title} cover" class="games-cover"></a>
@@ -38,5 +39,9 @@ function displayGames(gamesList) {
         <p class="price">$${game.price}</p>
         <a href="/cart-full.html" id="add-to-cart">Add to cart</a>
         </div>`;
-  });
+    });
+  } catch (error) {
+    console.log("an error occured");
+    gameTitle.innerHTML = "An error occured";
+  }
 }
