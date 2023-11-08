@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="Description"
-      content="Information about Gamehub - The universe of games."
+      content="We love to get feedback here at Gamehub - the universe of games!"
     />
     <script
       src="https://kit.fontawesome.com/e974c7fc56.js"
@@ -20,7 +20,7 @@
       rel="stylesheet"
     />
     <link href="/css/styles.css" rel="stylesheet" />
-    <title>Gamehub | About</title>
+    <title>Gamehub | Contact</title>
   </head>
 
   <body>
@@ -34,16 +34,16 @@
           />
         </a>
         <input type="checkbox" id="menu-check" />
-        <label for="menu-check"
-          ><span class="hidden"> Hamburger </span
+        <label for="menu-check">
+          <span class="hidden"> Hamburger </span
           ><i class="fas fa-bars fa-2xl"></i
         ></label>
         <nav class="menubar">
           <ul class="navMenu">
             <li><a href="index.html">Home</a></li>
             <li><a href="/html/games/index.html">Games</a></li>
-            <li><a href="/html/about/index.html">About</a></li>
-            <li><a href="/html/contact/index.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li>
               <a href="/cart.html"
                 ><i class="fa-sharp fa-solid fa-cart-shopping"></i
@@ -57,27 +57,32 @@
       <div class="background">
         <div class="BG">
           <div class="main-content">
-            <div class="about-content">
-              <div class="about-info-wrap">
-                <h1 class="about-heading">About us</h1>
-                <p class="about-text">
-                  We are an online game store that provide digital games to
-                  gamers at a competitive price. GameHub allows you to purchase
-                  a wide selection of games in all genres.
-                </p>
-
-                <p class="about-text">
-                  We have games compatible with all of the most popular
-                  consoles, as well as PC games. Follow us on social media to
-                  get the latest updates on what games are available!
-                </p>
-
-                <p class="about-text">
-                  Our aim is to always provide the best games for the smallest
-                  amount of money!
-                </p>
+            <section class="contact-wrapper">
+              <h1 class="contact-heading">Get in touch with us</h1>
+              <div class="contact-content">
+                <form class="form" action="contact-sent.html">
+                  <label for="name" class="contact-form-labels">Name</label>
+                  <input type="text" id="name" />
+                  <label for="email" class="contact-form-labels">Email</label>
+                  <input type="email" id="email" />
+                  <label for="phone" class="contact-form-labels">Phone</label>
+                  <input type="tel" id="phone" />
+                  <label for="message" class="contact-form-labels"
+                    >Message</label
+                  >
+                  <textarea id="message"></textarea>
+                  <button class="contact-send">Let us know!</button>
+                </form>
+                <div class="contact-text">
+                  <p>
+                    Do not hesitate to reach out to us. We will gladly be to
+                    your assistance to solve any inconvinience regarding your
+                    purchase with us
+                  </p>
+                  <p>You can also contact us on social media!</p>
+                </div>
               </div>
-            </div>
+            </section>
           </div>
         </div>
       </div>
