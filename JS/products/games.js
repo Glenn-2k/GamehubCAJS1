@@ -20,7 +20,7 @@ console.log(game);
 const gameArray = Array.from(game);
 
 export async function gamesPage() {
-  const games = await getGames;
+  const games = await getGames();
   displayGames(games);
   // console.log(games);
 }
