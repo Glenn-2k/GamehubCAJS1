@@ -1,6 +1,6 @@
 import { apiUrl } from "../api.js";
 
-const gameTitle = document.querySelector(".games-container");
+const gameContainer = document.querySelector(".games-container");
 
 export async function getGames() {
   try {
@@ -10,12 +10,12 @@ export async function getGames() {
     return results;
   } catch (error) {
     console.log("an error occured");
-    gameTitle.innerHTML = "An error occured";
+    gameContainer.innerHTML = "An error occured";
   }
 }
 
 const game = await getGames();
-console.log(game);
+// console.log(game);
 
 const gameArray = Array.from(game);
 
@@ -27,11 +27,11 @@ export async function gamesPage() {
 
 function displayGames(gamesList) {
   try {
-    gameTitle.innerHTML = "";
+    gameContainer.innerHTML = "";
     gameArray.forEach((game) => {
       // console.log(game.title);
       // console.log(game.description);
-      gameTitle.innerHTML += `
+      gameContainer.innerHTML += `
         <div class="game">
         <a href="/product-specific.html?id=${game.id}"><img src="${game.image}"
                                     alt="image of ${game.title} cover" class="games-cover"></a>
@@ -42,6 +42,6 @@ function displayGames(gamesList) {
     });
   } catch (error) {
     console.log("an error occured");
-    gameTitle.innerHTML = "An error occured";
+    gameContainer.innerHTML = "An error occured";
   }
 }

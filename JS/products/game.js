@@ -27,9 +27,9 @@ export async function gamePage() {
 
 function displayGame(specificGame) {
   try {
-  console.log(specificGame);
+    console.log(specificGame);
 
-  productSpecific.innerHTML = `
+    productSpecific.innerHTML = `
   <h1 class="specific-heading">${specificGame.title}</h1>
   <div class="grid-container-specific">
       <div class="specific-1">
@@ -41,8 +41,8 @@ function displayGame(specificGame) {
           <p class="specific-price">$${specificGame.price}</p>
           <a href="/cart-full.html" id='add-to-cart-specific'>Add to cart</a>
       </div>
-  </div>`;,
-} catch (error) {
-  productSpecific.innerHTML = "An error occured";
-}
+  </div>`;
+  } catch (error) {
+    productSpecific.innerHTML = "An error occured";
+  }
 }
