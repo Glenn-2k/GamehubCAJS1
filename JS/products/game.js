@@ -37,7 +37,6 @@ function displayGame(specificGame) {
       <div class="specific-2">
           <p class="specific-text">${specificGame.description}</p>
           <p class="specific-price">$${specificGame.price}</p>
-          <p class="specific-year">Released: ${specificGame.released}</p>
           <a href="/cart-full.html" id='add-to-cart-specific'>Add to cart</a>
       </div>
   </div>`;
