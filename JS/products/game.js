@@ -45,4 +45,6 @@ function displayGame(specificGame) {
   } catch (error) {
     productSpecific.innerHTML = "An error occured";
   }
+
+  document.title = `Gamehub | ${specificGame.title}`;
 }
