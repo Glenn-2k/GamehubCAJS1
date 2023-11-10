@@ -6,7 +6,6 @@ export async function getGames() {
   try {
     const response = await fetch(apiUrl);
     const results = await response.json();
-    // console.log(results);
     return results;
   } catch (error) {
     console.log("an error occured");
@@ -15,22 +14,18 @@ export async function getGames() {
 }
 
 const game = await getGames();
-// console.log(game);
 
 const gameArray = Array.from(game);
 
 export async function gamesPage() {
   const games = await getGames();
   displayGames(games);
-  // console.log(games);
 }
 
 function displayGames(gamesList) {
   try {
     gameContainer.innerHTML = "";
     gameArray.forEach((game) => {
-      // console.log(game.title);
-      // console.log(game.description);
       gameContainer.innerHTML += `
         <div class="game">
         <a href="/product-specific.html?id=${game.id}"><img src="${game.image}"

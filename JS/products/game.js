@@ -12,7 +12,6 @@ async function getGame() {
   try {
     const response = await fetch(apiCall);
     const results = await response.json();
-    // console.log(results);
     return results;
   } catch (error) {
     productSpecific.innerHTML = "An error occured";
@@ -22,7 +21,6 @@ async function getGame() {
 export async function gamePage() {
   const specificGame = await getGame();
   displayGame(specificGame);
-  // console.log(games);
 }
 
 function displayGame(specificGame) {
@@ -39,6 +37,7 @@ function displayGame(specificGame) {
       <div class="specific-2">
           <p class="specific-text">${specificGame.description}</p>
           <p class="specific-price">$${specificGame.price}</p>
+          <p class="specific-price">$${specificGame.released}</p>
           <a href="/cart-full.html" id='add-to-cart-specific'>Add to cart</a>
       </div>
   </div>`;
