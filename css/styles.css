@@ -496,6 +496,13 @@ Mobile View  */
   margin: 0;
 }
 
+.specific-year {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0;
+}
+
 #add-to-cart-specific {
   font-size: 0.55rem;
   background-color: #f4a60d;
@@ -540,11 +547,6 @@ Mobile View  */
 
   .specific-heading {
     font-size: 1.5rem;
-  }
-
-  .specific-year {
-    font-size: 1rem;
-    font-style: italic;
   }
 }
 
