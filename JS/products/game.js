@@ -1,5 +1,4 @@
-// const url = "https://api.noroff.dev/api/v1/gamehub/";
-import { apiUrl } from "../api";
+const url = "https://api.noroff.dev/api/v1/gamehub/";
 
 const productSpecific = document.querySelector(".product-specific-content");
 
@@ -7,7 +6,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const apiCall = apiUrl + id;
+const apiCall = url + id;
 
 async function getGame() {
   try {
