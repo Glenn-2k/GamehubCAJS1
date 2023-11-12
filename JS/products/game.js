@@ -1,4 +1,5 @@
-const url = "https://api.noroff.dev/api/v1/gamehub/";
+// const url = "https://api.noroff.dev/api/v1/gamehub/";
+import { apiUrl } from "../api";
 
 const productSpecific = document.querySelector(".product-specific-content");
 
@@ -6,7 +7,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const apiCall = url + id;
+const apiCall = apiUrl + id;
 
 async function getGame() {
   try {
@@ -25,8 +26,6 @@ export async function gamePage() {
 
 function displayGame(specificGame) {
   try {
-    console.log(specificGame);
-
     productSpecific.innerHTML = `
   <h1 class="specific-heading">${specificGame.title}</h1>
   <div class="grid-container-specific">
@@ -42,6 +41,7 @@ function displayGame(specificGame) {
   </div>`;
   } catch (error) {
     productSpecific.innerHTML = "An error occured";
+    console.log("an error occured");
   }
 
   document.title = `Gamehub | ${specificGame.title}`;
